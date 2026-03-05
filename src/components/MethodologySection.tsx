@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
 const steps = [
-  { num: "01", title: "Assess", desc: "We diagnose your current state, goals, and AI readiness." },
-  { num: "02", title: "Design", desc: "We create a strategy and pilot plan tailored to your business." },
-  { num: "03", title: "Build & Deploy", desc: "We implement, test, and launch AI solutions." },
-  { num: "04", title: "Support & Scale", desc: "Ongoing optimisation, training, and scaling support." },
+  { num: "01", title: "Diagnose", subtitle: "up to 5 days", desc: "We go on-site, understand your teams, workflows, and goals. We identify exactly where AI creates value." },
+  { num: "02", title: "Pilot", subtitle: "~1 month", desc: "We implement quick wins for key managers and departments, train your people, and prove impact fast." },
+  { num: "03", title: "Scale", desc: "We roll out across the business, integrating the right tools and building custom solutions only when needed." },
+  { num: "04", title: "Support", desc: "Ongoing optimisation, training, and scaling support as your AI maturity grows." },
 ];
 
 const MethodologySection = () => (
