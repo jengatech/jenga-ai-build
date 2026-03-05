@@ -45,7 +45,7 @@ const orgSchema = {
   "@type": "ProfessionalService",
   name: "Jenga Agency",
   description:
-    "Jenga Agency is a Nairobi-based AI consulting and implementation firm that helps companies across Europe, the US, and Africa turn AI into measurable business results.",
+    "Jenga Agency is a Nairobi-based AI consulting and implementation firm that works on the ground with companies across Europe, the US, and Africa to turn AI into measurable business results.",
   url: "https://jenga-agency.com",
   areaServed: ["Europe", "United States", "Africa"],
   address: {
