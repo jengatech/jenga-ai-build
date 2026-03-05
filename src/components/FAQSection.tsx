@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: "How long does a typical AI engagement take?",
-    a: "It depends on scope. An AI Opportunity Diagnostic typically takes 2–4 weeks. A full strategy-to-implementation engagement can range from 2 to 6 months. We'll give you a clear timeline after the initial assessment.",
+    a: "Faster than you'd expect. An AI Opportunity Diagnostic takes up to 5 working days depending on the size of your business. A pilot phase — where we implement quick wins for key teams and train them — takes about a month. Full implementation varies based on scope and ambition. We give you a clear timeline after the diagnostic.",
   },
   {
     q: "Do you provide ongoing support after implementation?",

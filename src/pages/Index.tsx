@@ -69,7 +69,7 @@ const Index = () => (
       <title>Jenga Agency — AI Consulting & Implementation</title>
       <meta
         name="description"
-        content="Jenga Agency is a Nairobi-based AI consulting and implementation firm that helps companies across Europe, the US, and Africa turn AI into measurable business results."
+        content="Jenga Agency is a Nairobi-based AI consulting and implementation firm that works on the ground with companies across Europe, the US, and Africa to turn AI into measurable business results."
       />
       <link rel="canonical" href="https://jenga-agency.com" />
       <meta property="og:title" content="Jenga Agency — AI Consulting & Implementation" />

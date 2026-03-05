@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const steps = [
+const steps: { num: string; title: string; subtitle?: string; desc: string }[] = [
   { num: "01", title: "Diagnose", subtitle: "up to 5 days", desc: "We go on-site, understand your teams, workflows, and goals. We identify exactly where AI creates value." },
   { num: "02", title: "Pilot", subtitle: "~1 month", desc: "We implement quick wins for key managers and departments, train your people, and prove impact fast." },
   { num: "03", title: "Scale", desc: "We roll out across the business, integrating the right tools and building custom solutions only when needed." },

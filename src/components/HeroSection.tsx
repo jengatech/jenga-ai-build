@@ -46,7 +46,7 @@ const HeroSection = () => (
         </div>
 
         <p className="text-sm text-muted-foreground">
-          Based in Nairobi. Working with companies across Europe, the US, and Africa.
+          Based in Nairobi. On the ground with clients across Europe, the US, and Africa.
         </p>
       </motion.div>
     </div>
