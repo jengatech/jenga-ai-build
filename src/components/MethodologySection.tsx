@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
-const steps = [
-  { num: "01", title: "Assess", desc: "We diagnose your current state, goals, and AI readiness." },
-  { num: "02", title: "Design", desc: "We create a strategy and pilot plan tailored to your business." },
-  { num: "03", title: "Build & Deploy", desc: "We implement, test, and launch AI solutions." },
-  { num: "04", title: "Support & Scale", desc: "Ongoing optimisation, training, and scaling support." },
+const steps: { num: string; title: string; subtitle?: string; desc: string }[] = [
+  { num: "01", title: "Diagnose", subtitle: "up to 5 days", desc: "We go on-site, understand your teams, workflows, and goals. We identify exactly where AI creates value." },
+  { num: "02", title: "Pilot", subtitle: "~1 month", desc: "We implement quick wins for key managers and departments, train your people, and prove impact fast." },
+  { num: "03", title: "Scale", desc: "We roll out across the business, integrating the right tools and building custom solutions only when needed." },
+  { num: "04", title: "Support", desc: "Ongoing optimisation, training, and scaling support as your AI maturity grows." },
 ];
 
 const MethodologySection = () => (
@@ -34,8 +34,9 @@ const MethodologySection = () => (
             className="relative"
           >
             <span className="text-5xl font-bold text-primary/10">{s.num}</span>
-            <h3 className="text-xl font-semibold mt-2 mb-2">{s.title}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+            <h3 className="text-xl font-semibold mt-2 mb-1">{s.title}</h3>
+            {s.subtitle && <span className="text-xs text-primary/60 font-medium">{s.subtitle}</span>}
+            <p className="text-sm text-muted-foreground leading-relaxed mt-2">{s.desc}</p>
             {i < steps.length - 1 && (
               <div className="hidden lg:block absolute top-8 -right-3 w-6 border-t border-dashed border-primary/20" />
             )}

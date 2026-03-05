@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 const faqs = [
   {
     q: "Where are you based and who do you work with?",
-    a: "We're based in Nairobi, Kenya, but work with clients across Europe, the US, and Africa. Our AI consulting engagements are fully remote-friendly, and our engineering team operates across time zones.",
+    a: "We're based in Nairobi, Kenya, and work with clients across Europe, the US, and Africa. We believe the best results come from being on the ground — understanding your teams, their workflows, and where they stand. We travel to our clients as much as possible, and complement on-site work with remote collaboration across time zones.",
   },
   {
     q: "Do you always build custom solutions?",
@@ -21,11 +21,11 @@ const faqs = [
   },
   {
     q: "What industries do you work with?",
-    a: "We work across a range of industries including financial services, logistics, retail, healthcare, and professional services. Our methodology is industry-agnostic — we focus on understanding your business context and applying AI where it creates the most value.",
+    a: "We work across industries including agriculture, finance, healthcare, manufacturing, retail, and technology. AI opportunities exist in every sector — what matters is matching the right approach to your specific business context and goals.",
   },
   {
     q: "How long does a typical AI engagement take?",
-    a: "It depends on scope. An AI Opportunity Diagnostic typically takes 2–4 weeks. A full strategy-to-implementation engagement can range from 2 to 6 months. We'll give you a clear timeline after the initial assessment.",
+    a: "Faster than you'd expect. An AI Opportunity Diagnostic takes up to 5 working days depending on the size of your business. A pilot phase — where we implement quick wins for key teams and train them — takes about a month. Full implementation varies based on scope and ambition. We give you a clear timeline after the diagnostic.",
   },
   {
     q: "Do you provide ongoing support after implementation?",

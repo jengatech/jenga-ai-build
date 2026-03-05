@@ -18,7 +18,7 @@ const faqSchema = {
       name: "Where are you based and who do you work with?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We're based in Nairobi, Kenya, but work with clients across Europe, the US, and Africa. Our AI consulting engagements are fully remote-friendly, and our engineering team operates across time zones.",
+        text: "We're based in Nairobi, Kenya, and work with clients across Europe, the US, and Africa. We believe the best results come from being on the ground — understanding your teams, their workflows, and where they stand. We travel to our clients as much as possible, and complement on-site work with remote collaboration across time zones.",
       },
     },
     {
@@ -34,7 +34,7 @@ const faqSchema = {
       name: "How long does a typical AI engagement take?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "It depends on scope. An AI Opportunity Diagnostic typically takes 2–4 weeks. A full strategy-to-implementation engagement can range from 2 to 6 months.",
+        text: "Faster than you'd expect. An AI Opportunity Diagnostic takes up to 5 working days depending on the size of your business. A pilot phase — where we implement quick wins for key teams and train them — takes about a month. Full implementation varies based on scope and ambition. We give you a clear timeline after the diagnostic.",
       },
     },
   ],
@@ -45,7 +45,7 @@ const orgSchema = {
   "@type": "ProfessionalService",
   name: "Jenga Agency",
   description:
-    "Jenga Agency is a Nairobi-based AI consulting and implementation firm that helps companies across Europe, the US, and Africa turn AI into measurable business results.",
+    "Jenga Agency is a Nairobi-based AI consulting and implementation firm that works on the ground with companies across Europe, the US, and Africa to turn AI into measurable business results.",
   url: "https://jenga-agency.com",
   areaServed: ["Europe", "United States", "Africa"],
   address: {
@@ -69,7 +69,7 @@ const Index = () => (
       <title>Jenga Agency — AI Consulting & Implementation</title>
       <meta
         name="description"
-        content="Jenga Agency is a Nairobi-based AI consulting and implementation firm that helps companies across Europe, the US, and Africa turn AI into measurable business results."
+        content="Jenga Agency is a Nairobi-based AI consulting and implementation firm that works on the ground with companies across Europe, the US, and Africa to turn AI into measurable business results."
       />
       <link rel="canonical" href="https://jenga-agency.com" />
       <meta property="og:title" content="Jenga Agency — AI Consulting & Implementation" />
