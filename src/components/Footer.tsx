@@ -1,0 +1,43 @@
+const Footer = () => (
+  <footer className="border-t border-border py-12">
+    <div className="container mx-auto px-6">
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div>
+          <a href="#" className="text-lg font-bold tracking-tight text-foreground">
+            Jenga<span className="text-primary">.</span>
+          </a>
+          <p className="text-xs text-muted-foreground mt-2">
+            AI Consulting · Strategy · Implementation · Training
+          </p>
+          <p className="text-xs text-muted-foreground mt-1">Nairobi, Kenya</p>
+        </div>
+
+        <nav className="flex flex-wrap gap-6" aria-label="Footer navigation">
+          {[
+            { label: "Services", href: "#services" },
+            { label: "Methodology", href: "#methodology" },
+            { label: "About", href: "#about" },
+            { label: "FAQ", href: "#faq" },
+            { label: "Contact", href: "#contact" },
+          ].map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {l.label}
+            </a>
+          ))}
+        </nav>
+      </div>
+
+      <div className="glow-line mt-8 mb-6" />
+
+      <p className="text-xs text-muted-foreground text-center">
+        © {new Date().getFullYear()} Jenga Agency. All rights reserved.
+      </p>
+    </div>
+  </footer>
+);
+
+export default Footer;
