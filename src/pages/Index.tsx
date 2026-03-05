@@ -18,7 +18,7 @@ const faqSchema = {
       name: "Where are you based and who do you work with?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We're based in Nairobi, Kenya, but work with clients across Europe, the US, and Africa. Our AI consulting engagements are fully remote-friendly, and our engineering team operates across time zones.",
+        text: "We're based in Nairobi, Kenya, and work with clients across Europe, the US, and Africa. We believe the best results come from being on the ground — understanding your teams, their workflows, and where they stand. We travel to our clients as much as possible, and complement on-site work with remote collaboration across time zones.",
       },
     },
     {
