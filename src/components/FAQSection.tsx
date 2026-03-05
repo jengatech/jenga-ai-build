@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: "What industries do you work with?",
-    a: "We work across a range of industries including financial services, logistics, retail, healthcare, and professional services. Our methodology is industry-agnostic — we focus on understanding your business context and applying AI where it creates the most value.",
+    a: "We work across industries including agriculture, finance, healthcare, manufacturing, retail, and technology. AI opportunities exist in every sector — what matters is matching the right approach to your specific business context and goals.",
   },
   {
     q: "How long does a typical AI engagement take?",
