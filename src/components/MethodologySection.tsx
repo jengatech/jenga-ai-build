@@ -34,8 +34,9 @@ const MethodologySection = () => (
             className="relative"
           >
             <span className="text-5xl font-bold text-primary/10">{s.num}</span>
-            <h3 className="text-xl font-semibold mt-2 mb-2">{s.title}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+            <h3 className="text-xl font-semibold mt-2 mb-1">{s.title}</h3>
+            {s.subtitle && <span className="text-xs text-primary/60 font-medium">{s.subtitle}</span>}
+            <p className="text-sm text-muted-foreground leading-relaxed mt-2">{s.desc}</p>
             {i < steps.length - 1 && (
               <div className="hidden lg:block absolute top-8 -right-3 w-6 border-t border-dashed border-primary/20" />
             )}
