@@ -1,13 +1,42 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, Mail, Linkedin } from "lucide-react";
+import { Send, Mail, Linkedin, Loader2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 const ContactSection = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    message: "",
+  });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: formData,
+      });
+
+      if (error) throw error;
+
+      setSubmitted(true);
+      toast.success("Message sent successfully!");
+    } catch (err) {
+      console.error("Contact form error:", err);
+      toast.error("Something went wrong. Please try again or email us directly.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -44,33 +73,55 @@ const ContactSection = () => {
             <form onSubmit={handleSubmit} className="space-y-4">
               <input
                 type="text"
+                name="name"
                 required
                 placeholder="Name"
+                value={formData.name}
+                onChange={handleChange}
                 className="w-full bg-card border border-border rounded-md px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors"
               />
               <input
                 type="email"
+                name="email"
                 required
                 placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
                 className="w-full bg-card border border-border rounded-md px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors"
               />
               <input
                 type="text"
+                name="company"
                 placeholder="Company"
+                value={formData.company}
+                onChange={handleChange}
                 className="w-full bg-card border border-border rounded-md px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors"
               />
               <textarea
+                name="message"
                 required
                 rows={4}
                 placeholder="Tell us about your challenge..."
+                value={formData.message}
+                onChange={handleChange}
                 className="w-full bg-card border border-border rounded-md px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors resize-none"
               />
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 bg-primary text-primary-foreground font-medium py-3 rounded-md hover:opacity-90 transition-opacity"
+                disabled={loading}
+                className="w-full flex items-center justify-center gap-2 bg-primary text-primary-foreground font-medium py-3 rounded-md hover:opacity-90 transition-opacity disabled:opacity-50"
               >
-                Send Message
-                <Send size={16} />
+                {loading ? (
+                  <>
+                    Sending...
+                    <Loader2 size={16} className="animate-spin" />
+                  </>
+                ) : (
+                  <>
+                    Send Message
+                    <Send size={16} />
+                  </>
+                )}
               </button>
             </form>
           )}
