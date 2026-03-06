@@ -8,7 +8,7 @@ const corsHeaders = {
 };
 
 const GATEWAY_URL = "https://connector-gateway.lovable.dev/slack/api";
-const SLACK_CHANNEL = "#general";
+const SLACK_CHANNEL = "#jenga-websitecontactform";
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
