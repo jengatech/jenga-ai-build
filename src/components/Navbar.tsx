@@ -31,7 +31,9 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="#contact"
+            href="https://calendly.com/yoanncopreaux/ai-discovery-call-15-min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm font-medium bg-primary text-primary-foreground px-4 py-2 rounded-md hover:opacity-90 transition-opacity"
           >
             Book a Call
@@ -67,7 +69,9 @@ const Navbar = () => {
                 </a>
               ))}
               <a
-                href="#contact"
+                href="https://calendly.com/yoanncopreaux/ai-discovery-call-15-min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-sm font-medium bg-primary text-primary-foreground px-4 py-2 rounded-md text-center hover:opacity-90 transition-opacity"
                 onClick={() => setOpen(false)}
               >
