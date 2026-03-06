@@ -7,7 +7,8 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
-const RECIPIENT_EMAIL = "info@jenga-agency.com";
+const GATEWAY_URL = "https://connector-gateway.lovable.dev/slack/api";
+const SLACK_CHANNEL = "#general";
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -42,15 +43,53 @@ serve(async (req) => {
       );
     }
 
-    // Send email notification via Supabase's built-in SMTP
-    // Using a simple fetch to the Supabase Auth admin endpoint isn't suitable here,
-    // so we use Resend or similar. For now, we'll use the built-in email hook approach.
-    // Since we don't have a third-party email service yet, we store in DB and
-    // can add email sending later (e.g., HubSpot integration).
-    
-    console.log(`New contact form submission from ${name} (${email})`);
-    console.log(`Company: ${company || "N/A"}`);
-    console.log(`Message: ${message}`);
+    // Send Slack notification
+    const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
+    const SLACK_API_KEY = Deno.env.get("SLACK_API_KEY");
+
+    if (LOVABLE_API_KEY && SLACK_API_KEY) {
+      const slackMessage = {
+        channel: SLACK_CHANNEL,
+        text: `📬 New contact form submission from *${name}*`,
+        blocks: [
+          {
+            type: "header",
+            text: { type: "plain_text", text: "📬 New Contact Form Submission", emoji: true },
+          },
+          {
+            type: "section",
+            fields: [
+              { type: "mrkdwn", text: `*Name:*\n${name}` },
+              { type: "mrkdwn", text: `*Email:*\n${email}` },
+              { type: "mrkdwn", text: `*Company:*\n${company || "N/A"}` },
+            ],
+          },
+          {
+            type: "section",
+            text: { type: "mrkdwn", text: `*Message:*\n${message}` },
+          },
+        ],
+      };
+
+      const slackResponse = await fetch(`${GATEWAY_URL}/chat.postMessage`, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${LOVABLE_API_KEY}`,
+          "X-Connection-Api-Key": SLACK_API_KEY,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(slackMessage),
+      });
+
+      const slackData = await slackResponse.json();
+      if (!slackResponse.ok || !slackData.ok) {
+        console.error("Slack notification failed:", JSON.stringify(slackData));
+      } else {
+        console.log("Slack notification sent successfully");
+      }
+    } else {
+      console.warn("Slack not configured — skipping notification");
+    }
 
     return new Response(
       JSON.stringify({ success: true, message: "Submission received" }),
