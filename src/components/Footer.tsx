@@ -1,11 +1,20 @@
+import { Link } from "react-router-dom";
+
+const footerLinks = [
+  { label: "Home", href: "/" },
+  { label: "AI Consulting", href: "/ai-consulting" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+];
+
 const Footer = () => (
   <footer className="border-t border-border py-12">
     <div className="container mx-auto px-6">
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <div>
-          <a href="#" className="text-lg font-bold tracking-tight text-foreground">
+          <Link to="/" className="text-lg font-bold tracking-tight text-foreground">
             Jenga<span className="text-primary">.</span>
-          </a>
+          </Link>
           <p className="text-xs text-muted-foreground mt-2">
             AI Consulting · Strategy · Implementation · Training
           </p>
@@ -13,20 +22,14 @@ const Footer = () => (
         </div>
 
         <nav className="flex flex-wrap gap-6" aria-label="Footer navigation">
-          {[
-            { label: "Services", href: "#services" },
-            { label: "Methodology", href: "#methodology" },
-            { label: "About", href: "#about" },
-            { label: "FAQ", href: "#faq" },
-            { label: "Contact", href: "#contact" },
-          ].map((l) => (
-            <a
+          {footerLinks.map((l) => (
+            <Link
               key={l.href}
-              href={l.href}
+              to={l.href}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
         </nav>
       </div>
