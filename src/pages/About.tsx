@@ -141,10 +141,11 @@ const About = () => (
             <h2 className="text-3xl md:text-4xl font-bold mb-12">The Founder</h2>
 
             <div className="flex flex-col md:flex-row gap-10 items-start">
-              {/* Photo placeholder */}
-              <div className="shrink-0 w-40 h-40 md:w-48 md:h-48 rounded-xl bg-secondary border border-border flex items-center justify-center">
-                <User className="text-muted-foreground" size={48} />
-              </div>
+              <img
+                src={founderPhoto}
+                alt="Yoann Copreaux — Founder & CEO of Jenga Agency"
+                className="shrink-0 w-40 h-40 md:w-48 md:h-48 rounded-xl object-cover border border-border"
+              />
 
               <div className="max-w-2xl">
                 <h3 className="text-xl font-semibold mb-1">Yoann Copreaux</h3>
