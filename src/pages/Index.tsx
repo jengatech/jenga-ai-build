@@ -58,6 +58,7 @@ const Index = () => (
       />
       <meta property="og:url" content="https://jenga-agency.com" />
       <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Jenga Agency" />
       <meta name="twitter:card" content="summary_large_image" />
       <script type="application/ld+json">{JSON.stringify(orgSchema)}</script>
       <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
