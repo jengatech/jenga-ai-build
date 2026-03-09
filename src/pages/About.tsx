@@ -1,9 +1,10 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Linkedin, User } from "lucide-react";
+import { ArrowRight, Linkedin } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import founderPhoto from "@/assets/founder-portrait.jpg";
 
 const metaDesc =
   "Jenga Agency is a Nairobi-based AI consulting firm helping businesses across Europe, the US, and Africa turn AI into real results. Learn about our story and approach.";
@@ -140,10 +141,11 @@ const About = () => (
             <h2 className="text-3xl md:text-4xl font-bold mb-12">The Founder</h2>
 
             <div className="flex flex-col md:flex-row gap-10 items-start">
-              {/* Photo placeholder */}
-              <div className="shrink-0 w-40 h-40 md:w-48 md:h-48 rounded-xl bg-secondary border border-border flex items-center justify-center">
-                <User className="text-muted-foreground" size={48} />
-              </div>
+              <img
+                src={founderPhoto}
+                alt="Yoann Copreaux — Founder & CEO of Jenga Agency"
+                className="shrink-0 w-40 h-40 md:w-48 md:h-48 rounded-xl object-cover border border-border"
+              />
 
               <div className="max-w-2xl">
                 <h3 className="text-xl font-semibold mb-1">Yoann Copreaux</h3>
@@ -152,7 +154,7 @@ const About = () => (
                   Based in Nairobi, Yoann has spent years building and placing software engineering teams across borders, shipping products, and helping businesses adopt technology that actually works. He now leads Jenga's AI consulting, working directly with clients on diagnosis, strategy, and implementation.
                 </p>
                 <a
-                  href="https://linkedin.com/in/yoanncopreaux"
+                  href="https://www.linkedin.com/in/yoanncopreaux/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
