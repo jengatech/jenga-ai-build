@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Linkedin } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { orgSchema } from "@/lib/schemas";
 import founderPhoto from "@/assets/founder-portrait.jpg";
 
 const metaDesc =
@@ -21,6 +22,7 @@ const About = () => (
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="Jenga Agency" />
       <meta name="twitter:card" content="summary_large_image" />
+      <script type="application/ld+json">{JSON.stringify(orgSchema)}</script>
     </Helmet>
 
     <Navbar />
