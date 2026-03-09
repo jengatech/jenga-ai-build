@@ -1,6 +1,10 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { ArrowRight, Linkedin } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import founderPhoto from "@/assets/founder-portrait.jpg";
 import { ArrowRight, Linkedin, User } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
