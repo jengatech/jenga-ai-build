@@ -140,6 +140,17 @@ const faqSchema = {
 const metaDesc =
   "Jenga Agency helps businesses diagnose where AI creates real value, then implements the right solutions. From strategy to deployment — based in Nairobi, working globally.";
 
+const professionalServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Jenga Agency",
+  url: "https://jenga-agency.com/ai-consulting",
+  description: "AI consulting and implementation services including diagnostics, strategy, implementation, and training.",
+  serviceType: ["AI Consulting", "AI Implementation", "AI Strategy", "AI Training"],
+  areaServed: ["Europe", "United States", "Africa", "Kenya"],
+  provider: { "@type": "Organization", name: "Jenga Agency" },
+};
+
 const AIConsulting = () => (
   <>
     <Helmet>
@@ -152,6 +163,8 @@ const AIConsulting = () => (
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="Jenga Agency" />
       <meta name="twitter:card" content="summary_large_image" />
+      <script type="application/ld+json">{JSON.stringify(orgSchema)}</script>
+      <script type="application/ld+json">{JSON.stringify(professionalServiceSchema)}</script>
       <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
     </Helmet>
 

@@ -22,6 +22,7 @@ const About = () => (
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="Jenga Agency" />
       <meta name="twitter:card" content="summary_large_image" />
+      <script type="application/ld+json">{JSON.stringify(orgSchema)}</script>
     </Helmet>
 
     <Navbar />
