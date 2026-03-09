@@ -154,7 +154,7 @@ const About = () => (
                   Based in Nairobi, Yoann has spent years building and placing software engineering teams across borders, shipping products, and helping businesses adopt technology that actually works. He now leads Jenga's AI consulting, working directly with clients on diagnosis, strategy, and implementation.
                 </p>
                 <a
-                  href="https://linkedin.com/in/yoanncopreaux"
+                  href="https://www.linkedin.com/in/yoanncopreaux/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
