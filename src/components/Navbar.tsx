@@ -1,13 +1,13 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { label: "Services", href: "#services" },
-  { label: "Methodology", href: "#methodology" },
-  { label: "About", href: "#about" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "AI Consulting", href: "/ai-consulting" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const Navbar = () => {
@@ -16,28 +16,26 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-6">
-        <a href="#" className="text-xl font-bold tracking-tight text-foreground">
+        <Link to="/" className="text-xl font-bold tracking-tight text-foreground">
           Jenga<span className="text-primary">.</span>
-        </a>
+        </Link>
 
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((l) => (
-            <a
+            <Link
               key={l.href}
-              href={l.href}
+              to={l.href}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="https://calendly.com/yoanncopreaux/ai-discovery-call-15-min"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/contact"
             className="text-sm font-medium bg-primary text-primary-foreground px-4 py-2 rounded-md hover:opacity-90 transition-opacity"
           >
-            Book a Call
-          </a>
+            Book a Discovery Call
+          </Link>
         </div>
 
         <button
@@ -59,24 +57,22 @@ const Navbar = () => {
           >
             <div className="flex flex-col px-6 py-4 gap-4">
               {navLinks.map((l) => (
-                <a
+                <Link
                   key={l.href}
-                  href={l.href}
+                  to={l.href}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   onClick={() => setOpen(false)}
                 >
                   {l.label}
-                </a>
+                </Link>
               ))}
-              <a
-                href="https://calendly.com/yoanncopreaux/ai-discovery-call-15-min"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/contact"
                 className="text-sm font-medium bg-primary text-primary-foreground px-4 py-2 rounded-md text-center hover:opacity-90 transition-opacity"
                 onClick={() => setOpen(false)}
               >
-                Book a Call
-              </a>
+                Book a Discovery Call
+              </Link>
             </div>
           </motion.div>
         )}
