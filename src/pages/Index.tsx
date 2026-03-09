@@ -41,28 +41,6 @@ const faqSchema = {
   ],
 };
 
-const orgSchema = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: "Jenga Agency",
-  description:
-    "Jenga Agency is a Nairobi-based AI consulting and implementation firm that works on the ground with companies across Europe, the US, and Africa to turn AI into measurable business results.",
-  url: "https://jenga-agency.com",
-  areaServed: ["Europe", "United States", "Africa"],
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Nairobi",
-    addressCountry: "KE",
-  },
-  serviceType: [
-    "AI Consulting",
-    "AI Strategy",
-    "AI Implementation",
-    "AI Training",
-    "Software Engineering",
-    "Staff Augmentation",
-  ],
-};
 
 const Index = () => (
   <>

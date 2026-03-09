@@ -6,6 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { orgSchema } from "@/lib/schemas";
 
 const metaDesc =
   "Get in touch with Jenga Agency for AI consulting, implementation, or software engineering. Book a discovery call or send us a message.";

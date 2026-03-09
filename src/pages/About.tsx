@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Linkedin } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { orgSchema } from "@/lib/schemas";
 import founderPhoto from "@/assets/founder-portrait.jpg";
 
 const metaDesc =
