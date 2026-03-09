@@ -5,9 +5,6 @@ import { ArrowRight, Linkedin } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import founderPhoto from "@/assets/founder-portrait.jpg";
-import { ArrowRight, Linkedin, User } from "lucide-react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 const metaDesc =
   "Jenga Agency is a Nairobi-based AI consulting firm helping businesses across Europe, the US, and Africa turn AI into real results. Learn about our story and approach.";
